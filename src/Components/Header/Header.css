@@ -1,0 +1,21 @@
+.headersection{
+    background-color: navy;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    align-items: center;
+}
+.blogsheadername{
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.actionloginbutton{
+    margin-right:15px ;
+    cursor: pointer;
+}
+.actionregisterbutton{
+    cursor: pointer;
+}
