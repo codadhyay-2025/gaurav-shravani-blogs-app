@@ -4,14 +4,16 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Header from './Components/Header/Header';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
+import BlogsDashboard from './Components/BlogsDashboard/BlogsDashboard';
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      {/* <Dashboard></Dashboard> */}
-      {/* <Register></Register> */}
-      <Login></Login>
+      <Header/>
+      <Dashboard/>
+      <BlogsDashboard/>
+      <Login/>
+      <Register/>
     </div>
   );
 }
