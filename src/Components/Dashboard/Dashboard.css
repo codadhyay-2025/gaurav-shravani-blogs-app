@@ -11,10 +11,7 @@
 
 }
 
-.blogsname{
-    font-size: 32px;
-    font-weight: 700;
-}
+
 .actionbuttons{
     display: flex;
     justify-content: end;

@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+.blogsname{
+    font-size: 32px;
+    font-weight: 700;
+}
+.registername{
+  color: navy;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+.inputfielddata{
+  width: 95%;
+  height: 20px;
+  border-radius: 4px;
+  margin: 5px 0px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+.registerbutton{
+  width: 100%;
+  background-color: navy;
+  color: white;
+  margin: 20px 0px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}

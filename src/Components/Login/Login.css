@@ -1,0 +1,19 @@
+.loginsection{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 22%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+.loginbutton{
+    width: 100%;
+  background-color: navy;
+  color: white;
+  margin: 30px 0px 70px 0px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
