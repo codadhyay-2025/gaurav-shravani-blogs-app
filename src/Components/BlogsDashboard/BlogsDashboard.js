@@ -8,7 +8,7 @@ function BlogsDashboard() {
                         <div className="blogs">Blogs</div>
                         <span className="blogsText">Publish your passions, your way ...</span>
                     </div>
-                    <button className="createNewPostButton">Create new post</button>
+                    <button className="createNewPostButton"><i class="fa fa-plus-circle" aria-hidden="true"> Create new post </i> </button>
 
                 </div>
                 <hr />
@@ -23,12 +23,12 @@ function BlogsDashboard() {
 
                     <div className="buttonsSection">
                         <div>
-                            <button className="likeButton">Like</button>
-                            <button className="DislikeButton">DisLike</button>
+                            <button className="likeButton"><i class="fa fa-thumbs-o-up" aria-hidden="true"> Like </i></button>
+                            <button className="DislikeButton"><i class="fa fa-thumbs-o-down" aria-hidden="true"> DisLike </i></button>
                         </div>
                         <div>
-                            <button className="edit">Edit</button>
-                            <button className="delete">Delete</button>
+                            <button className="edit"><i class="fa fa-pencil" aria-hidden="true"> Edit </i></button>
+                            <button className="delete"><i class="fa fa-trash" aria-hidden="true"> Delete </i></button>
                         </div>
                     </div>
                 </div>

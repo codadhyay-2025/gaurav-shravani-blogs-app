@@ -7,8 +7,8 @@ function CreateNewPost(){
                 <hr/>
                 <textarea type="text" placeholder="Description"></textarea>
             <div className="titleButtons">
-                <button className="button">Cancel</button>
-                <button className="button">Save</button>
+                <button className="button"><i class="fa fa-ban" aria-hidden="true"> Cancel</i></button>
+                <button className="button"><i class="fa fa-bookmark" aria-hidden="true"> Save </i></button>
             </div>
             </div>
 
