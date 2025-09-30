@@ -1,5 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import"./Dashboard.css";
 function Dashboard(){
+    const navigate=useNavigate();
+
+    function handleLoginButton(){
+        navigate('/login')
+    }
+    function handleregisterButton(){
+        navigate('/register')
+    }
     return(
         <div>
             <div className="dashboardsection">
@@ -7,8 +16,8 @@ function Dashboard(){
                 <div> Publish your passion,your way... </div>
                 <hr/>
                 <div className="actionbuttons">
-                    <button className="actionlogin">Login</button>
-                    <button className="actionregister">Register</button>
+                    <button className="actionlogin" onClick={handleLoginButton}>Login</button>
+                    <button className="actionregister" onClick={handleregisterButton}>Register</button>
                 </div>
             </div>
         </div>

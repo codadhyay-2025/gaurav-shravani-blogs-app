@@ -1,5 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 function Login(){
+    const navigate =useNavigate();
+     function handleLoginButton(){
+        navigate('/blogs')
+     }
     return(
         <div>
             <div className="loginsection">
@@ -11,7 +16,7 @@ function Login(){
                 <input type="email" placeholder="test@gmail.com"  className="inputfielddata" /><br />
                 <label>Password</label><br />
                 <input type="password" placeholder="password"  className="inputfielddata" /><br />
-                <button className="loginbutton">Login</button>
+                <button className="loginbutton" onClick={handleLoginButton}>Login</button>
             </div>
 
         </div>

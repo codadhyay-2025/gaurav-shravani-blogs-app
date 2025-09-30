@@ -6,16 +6,28 @@ import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import BlogsDashboard from './Components/BlogsDashboard/BlogsDashboard';
 import CreateNewPost from './Components/CreateNewPost/CreateNewPost';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <Header/>
+      {/* <Header/>
       <Dashboard/>
       <BlogsDashboard/>
       <CreateNewPost/>
       <Login/>
-      <Register/>
+      <Register/> */}
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Dashboard/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/blogs' element={<BlogsDashboard/>}/>
+          <Route path='/createpost' element={<CreateNewPost/>}/>
+        </Routes>
+      </Router>
+
     </div>
   );
 }

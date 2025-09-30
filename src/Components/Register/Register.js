@@ -1,5 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 function Register() {
+    const navigate =useNavigate();
+     function handleRegisterButton(){
+        navigate('/login')
+     }
     return (
         <div>
             <div className="registersection">
@@ -13,7 +18,7 @@ function Register() {
                 <input type="email" placeholder="test@gmail.com"  className="inputfielddata" /><br />
                 <label>Password</label><br />
                 <input type="password" placeholder="password"  className="inputfielddata" /><br />
-                <button className="registerbutton">Register</button>
+                <button className="registerbutton" onClick={handleRegisterButton}>Register</button>
             </div>
         </div>
     );

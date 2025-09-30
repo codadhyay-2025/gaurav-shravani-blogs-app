@@ -1,5 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "./BlogsDashboard.css"
 function BlogsDashboard() {
+    const navigate = useNavigate();
+    
+    function handleCreateNewPostButton(){
+        navigate('/createpost')
+    }
+    function handleEditButton(){
+        navigate('/createpost')
+    }
     return (
         <div>
             <div className="arrangingBlogs">
@@ -8,7 +17,7 @@ function BlogsDashboard() {
                         <div className="blogs">Blogs</div>
                         <span className="blogsText">Publish your passions, your way ...</span>
                     </div>
-                    <button className="createNewPostButton">Create new post</button>
+                    <button className="createNewPostButton" onClick={handleCreateNewPostButton}>Create new post</button>
 
                 </div>
                 <hr />
@@ -27,7 +36,7 @@ function BlogsDashboard() {
                             <button className="DislikeButton">DisLike</button>
                         </div>
                         <div>
-                            <button className="edit">Edit</button>
+                            <button className="edit" onClick={handleEditButton}>Edit</button>
                             <button className="delete">Delete</button>
                         </div>
                     </div>
