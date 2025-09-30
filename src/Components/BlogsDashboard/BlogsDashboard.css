@@ -41,6 +41,7 @@ hr{
 .blogSection{
     background-color: white;
     padding:0px 10px;
+    border-radius: 5px;
 }
 .blogDesc{
     margin: 10px 0px;

@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Header from './Components/Header/Header';
 import BlogsDashboard from './Components/BlogsDashboard/BlogsDashboard';
+import CreateNewPost from './Components/Dashboard/CreateNewPost/CreateNewPost';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <Dashboard/>
       <BlogsDashboard/>
+      <CreateNewPost/>
     </div>
   );
 }
