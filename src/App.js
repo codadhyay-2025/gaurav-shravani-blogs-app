@@ -5,7 +5,7 @@ import Header from './Components/Header/Header';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import BlogsDashboard from './Components/BlogsDashboard/BlogsDashboard';
-import CreateNewPost from './Components/Dashboard/CreateNewPost/CreateNewPost';
+import CreateNewPost from './Components/CreateNewPost/CreateNewPost';
 
 function App() {
   return (
