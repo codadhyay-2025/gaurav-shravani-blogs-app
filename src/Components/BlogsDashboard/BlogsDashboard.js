@@ -9,13 +9,7 @@ function BlogsDashboard() {
     function handleEditButton(){
         navigate('/createpost')
     }
-    const data=[
-        {
-            title:hello_world,
-            created_At:pawargaurav1256gmail.com,
-            created_At:12/3/29433
-        }
-    ]
+    
     return (
         <div>
             <div className="arrangingBlogs">
@@ -28,15 +22,15 @@ function BlogsDashboard() {
 
                 </div>
                 <hr />
+                
                 <div className="blogSection">
-                   {data?.map((singleElement)=>{
-                   <div className="blogTitle">{singleElement.title}</div>
-                    <div><strong>{singleElement.created_At}</strong></div>
+                    <div className="blogTitle">Hello World</div>
+                    <div><strong>Created By</strong></div>
                     <div><strong>Created At</strong></div>
                     <hr />
                     <div className="blogDesc">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </div>)}}
+                    </div>
 
                     <div className="buttonsSection">
                         <div>

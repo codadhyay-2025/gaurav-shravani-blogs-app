@@ -1,5 +1,37 @@
 {
-    "user":[{
-"name":"gaurav"
-}]
+  "user": [
+    {
+      "name": "gaurav"
+    },
+    {
+      "id": "4ee1",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "4896",
+      "name": "Shravani",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": ""
+    },
+    {
+      "id": "a031",
+      "name": "Gaurav Pawar",
+      "email": "gaurav@gmail.com",
+      "password": "2345"
+    },
+    {
+      "id": "b379",
+      "name": "Shravani gunjal",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "1917",
+      "name": "Gaurav Pawar",
+      "email": "gaurav@gmail.com",
+      "password": "1234"
+    }
+  ]
 }
