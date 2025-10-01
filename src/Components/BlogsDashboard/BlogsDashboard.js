@@ -9,13 +9,7 @@ function BlogsDashboard() {
     function handleEditButton(){
         navigate('/createpost')
     }
-    // const data=[
-    //     {
-    //         title:hello_world,
-    //         created_At:pawargaurav1256gmail.com,
-    //         created_At:12/3/29433
-    //     }
-    // ]
+    
     return (
         <div>
             <div className="arrangingBlogs">
@@ -28,9 +22,10 @@ function BlogsDashboard() {
 
                 </div>
                 <hr />
+                
                 <div className="blogSection">
-                   <div className="blogTitle">hello_world</div>
-                    <div><strong>created_By</strong></div>
+                    <div className="blogTitle">Hello World</div>
+                    <div><strong>Created By</strong></div>
                     <div><strong>Created At</strong></div>
                     <hr />
                     <div className="blogDesc">

@@ -1,10 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
+import { useState } from "react";
+import axios from "axios";
 function Register() {
     const navigate =useNavigate();
-     function handleRegisterButton(){
-        navigate('/login')
+     
+   const[userRegisterData,setUserRegisterData]=useState({name:"",email:"",password:""});
+     function userName(event){
+        let user={...userRegisterData}
+        user["name"]=(event.target.value)
+        setUserRegisterData(user)
      }
+     function userEmail(event){
+        let user={...userRegisterData}
+        user["email"]=(event.target.value)
+        setUserRegisterData(user)
+     }
+     function userPassword(event){
+        let user={...userRegisterData}
+        user["password"]=(event.target.value)
+        setUserRegisterData(user)
+     }
+
+    function handleRegisterData(){
+        axios.post("http://localhost:4200/user",userRegisterData)
+            .then((response)=>{
+                console.log(response);
+                navigate('/login')
+            })
+
+    }
+
     return (
         <div>
             <div className="registersection">
@@ -13,12 +39,12 @@ function Register() {
                 <hr />
                 <div className="registername">Register</div>
                 <label>Name</label><br />
-                <input type="text" placeholder="Firstname Lastname"  className="inputfielddata"/><br />
+                <input type="text" placeholder="Firstname Lastname" value={userRegisterData.name} onChange={userName} className="inputfielddata" /><br />
                 <label>Email</label><br />
-                <input type="email" placeholder="test@gmail.com"  className="inputfielddata" /><br />
+                <input type="email" placeholder="test@gmail.com" value={userRegisterData.email} onChange={userEmail} className="inputfielddata" /><br />
                 <label>Password</label><br />
-                <input type="password" placeholder="password"  className="inputfielddata" /><br />
-                <button className="registerbutton" onClick={handleRegisterButton}>Register</button>
+                <input type="password" placeholder="password"   value={userRegisterData.password} onChange={userPassword} className="inputfielddata" /><br />
+                <button className="registerbutton" onClick={handleRegisterData}>Register</button>
             </div>
         </div>
     );
