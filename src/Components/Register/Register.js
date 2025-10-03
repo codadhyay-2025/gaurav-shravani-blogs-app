@@ -23,11 +23,14 @@ function Register() {
      }
 
     function handleRegisterData(){
-        axios.post("http://localhost:4200/user",userRegisterData)
-            .then((response)=>{
-                console.log(response);
-                navigate('/login')
-            })
+        if(!userRegisterData.email || !userRegisterData.email || !userRegisterData.password === null){
+                alert("Please Enter Valid Details!")
+        }
+        else{
+            axios.post("http://localhost:4200/user",userRegisterData)
+            .then(()=>{
+              navigate("/login") 
+            })}
 
     }
 

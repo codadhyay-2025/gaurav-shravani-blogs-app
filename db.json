@@ -1,7 +1,8 @@
 {
   "user": [
     {
-      "name": "gaurav"
+      "name": "gaurav",
+      "id": "0649"
     },
     {
       "id": "4ee1",
@@ -32,6 +33,67 @@
       "name": "Gaurav Pawar",
       "email": "gaurav@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "54be",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "c3bb",
+      "name": "Rutuja",
+      "email": "rutuja@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6ef3",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "bd92",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "b38a",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "b16c",
+      "name": "Gaurav pawar",
+      "email": "gaurav@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "My First Blog",
+      "description": "Hello"
+    },
+    {
+      "id": "a606"
+    },
+    {
+      "id": "7f76"
+    },
+    {
+      "id": "6e24"
+    },
+    {
+      "id": "1541",
+      "title": "dxfghj",
+      "description": "erfghj,"
+    },
+    {
+      "id": "9ce4",
+      "title": "qwertyu",
+      "description": "zxcvbnm"
     }
   ]
 }
