@@ -2,11 +2,7 @@
   "user": [
     {
       "name": "gaurav",
-<<<<<<< HEAD
       "id": "0649"
-=======
-      "id": "a1fc"
->>>>>>> 1e3b916914ec100042f3c55901f67539e1d0ae4c
     },
     {
       "id": "4ee1",
@@ -39,23 +35,7 @@
       "password": "1234"
     },
     {
-<<<<<<< HEAD
       "id": "54be",
-=======
-      "id": "8ef5",
-      "name": "grv",
-      "email": "grv@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "bd8c",
-      "name": "gaurav",
-      "email": "gaurav",
-      "password": "123"
-    },
-    {
-      "id": "d6eb",
->>>>>>> 1e3b916914ec100042f3c55901f67539e1d0ae4c
       "name": "",
       "email": "",
       "password": ""
@@ -114,10 +94,6 @@
       "id": "9ce4",
       "title": "qwertyu",
       "description": "zxcvbnm"
-      "id": "e5d7",
-      "name": "grv",
-      "email": "grv1",
-      "password": "123"
     }
   ]
 }
