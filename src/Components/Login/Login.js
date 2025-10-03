@@ -15,10 +15,31 @@ function Login(){
         setuserLoginData(user);
     }
     function handleLoginData(){
+        if(!userLoginData.email || !userLoginData.password){
+            alert("please enter email and password...")
+        }
         axios.get("http://localhost:4200/user",userLoginData)
             .then((Response)=>{
-                console.log(Response);
-                navigate('/blogs')
+                const user = Response.data.find(
+                    (singleElement)=>
+                        singleElement.email == userLoginData.email&&
+                        singleElement.password ==userLoginData.password
+                );
+                
+                if(user){
+                    // alert("Login success");
+                    localStorage.setItem("userName", userLoginData.name);
+                    localStorage.setItem("useremail",userLoginData.email)
+                    console.log(Response);
+                    navigate('/blogs')
+                }
+                else{
+                    alert("Invalid user");
+                    console.log("Please Enter Correct Information");
+                    
+                    
+                }
+                
             })
         
     }
