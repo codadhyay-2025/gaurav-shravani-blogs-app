@@ -69,31 +69,19 @@
       "name": "Gaurav pawar",
       "email": "gaurav@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "02ef",
+      "name": "dsvdfsvv",
+      "email": "ddd",
+      "password": "ddd"
     }
   ],
   "blogs": [
     {
-      "title": "My First Blog",
-      "description": "Hello"
-    },
-    {
-      "id": "a606"
-    },
-    {
-      "id": "7f76"
-    },
-    {
-      "id": "6e24"
-    },
-    {
-      "id": "1541",
-      "title": "dxfghj",
-      "description": "erfghj,"
-    },
-    {
-      "id": "9ce4",
-      "title": "qwertyu",
-      "description": "zxcvbnm"
+      "id": "9f14",
+      "title": "fvgbhn",
+      "description": "bghnjmk"
     }
   ]
 }
