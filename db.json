@@ -69,12 +69,37 @@
       "name": "Gaurav pawar",
       "email": "gaurav@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "e3df",
+      "name": "Shravani",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": "6789"
+    },
+    {
+      "id": "4037",
+      "name": "Rutuja Date",
+      "email": "rutuja@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "5d6b",
+      "name": "Rutuja Date",
+      "email": "rutuja@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "7a32",
+      "name": "Shravani Gunjal",
+      "email": "shravani@gmail.com",
+      "password": "1234"
     }
   ],
   "blogs": [
     {
       "title": "My First Blog",
-      "description": "Hello"
+      "description": "Hello",
+      "id": "efac"
     },
     {
       "id": "a606"
@@ -94,6 +119,16 @@
       "id": "9ce4",
       "title": "qwertyu",
       "description": "zxcvbnm"
+    },
+    {
+      "id": "97c9",
+      "title": "",
+      "description": ""
+    },
+    {
+      "id": "89c7",
+      "title": "",
+      "description": ""
     }
   ]
 }

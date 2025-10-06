@@ -1,14 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./BlogsDashboard.css"
+import axios from "axios";
 function BlogsDashboard() {
     const navigate = useNavigate();
     
     function handleCreateNewPostButton(){
         navigate('/createpost')
     }
-    function handleEditButton(){
-        navigate('/createpost')
-    }
+    
     const arr=[{
         title:"hello",
         created_by:"grv",
@@ -16,7 +15,13 @@ function BlogsDashboard() {
         description:"hello i am gaurav"
 
     }];
-    
+    const handleEditButton=(id)=>{
+        // axios.patch("http://localhost:4200/blogs/"+id)
+        // .then((Response)=>{
+        //     console.log(Response.data);
+            navigate('/createpost/'+id)
+        // })
+    }
     return (
         <div>
             <div className="arrangingBlogs">
@@ -45,7 +50,7 @@ function BlogsDashboard() {
                             <button className="DislikeButton"><i class="fa fa-thumbs-o-down" aria-hidden="true"> DisLike </i></button>
                         </div>
                         <div>
-                            <button className="edit" onClick={handleEditButton}><i class="fa fa-pencil" aria-hidden="true"> Edit </i></button>
+                            <button className="edit" onClick={handleEditButton(singleElement.id)}><i class="fa fa-pencil" aria-hidden="true"> Edit </i></button>
                             <button className="delete"><i class="fa fa-trash" aria-hidden="true"> Delete </i></button>
                         </div>
                     </div>

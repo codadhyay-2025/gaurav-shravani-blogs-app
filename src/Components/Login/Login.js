@@ -17,6 +17,7 @@ function Login(){
     function handleLoginData(){
         if(!userLoginData.email || !userLoginData.password){
             alert("please enter email and password...")
+            return 0;
         }
         axios.get("http://localhost:4200/user",userLoginData)
             .then((Response)=>{
