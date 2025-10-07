@@ -75,13 +75,61 @@
       "name": "dsvdfsvv",
       "email": "ddd",
       "password": "ddd"
+    },
+    {
+      "id": "e6da",
+      "name": "Shravani Gunjal",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "653a",
+      "name": "Shravani",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "44b6",
+      "name": "Shravani gunjal",
+      "email": "shravani@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "659e",
+      "name": "Shravani",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "8271",
+      "name": "gaurav",
+      "email": "gaurav@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "9a66",
+      "name": "Shardul",
+      "email": "gaurav@gmail.com",
+      "password": "1234"
     }
   ],
   "blogs": [
     {
-      "id": "9f14",
-      "title": "fvgbhn",
-      "description": "bghnjmk"
+      "id": "ae03",
+      "title": "My Blog",
+      "description": "Hii! I am Shravani."
+    },
+    {
+      "id": "1cca",
+      "title": "Shravani",
+      "description": "Hello"
+    },
+    {
+      "id": "8aaa",
+      "title": "wrettttttttttttt",
+      "description": "ad sharavni ahe",
+      "created_by": "gaurav@gmail.com",
+      "created_At": "2025/10/07"
     }
   ]
 }
