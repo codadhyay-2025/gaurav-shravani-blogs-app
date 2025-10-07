@@ -6,6 +6,7 @@ function BlogsDashboard() {
     const navigate = useNavigate();
     // const {id}=useParams();
     const[blogs,setblogs]= useState();
+
     function handleCreateNewPostButton(){
         navigate('/createpost')
     }
@@ -50,7 +51,13 @@ function BlogsDashboard() {
             
         })
     }
-
+function handleEditButton(id){
+        // axios.patch("http://localhost:4200/blogs/"+id)
+        // .then((Response)=>{
+        //     console.log(Response.data);
+            navigate("/createpost/"+id)
+        // })
+    }
     
     return (
         <div>
@@ -68,8 +75,8 @@ function BlogsDashboard() {
                 {blogs?.map((singleElement)=>{
                 return <div className="blogSection">
                     <div className="blogTitle">{singleElement.title}</div>
-                    <div><strong>Created By</strong>{singleElement.created_by}</div>
-                    <div><strong>Created At</strong>{singleElement.created_At}</div>
+                    <div><strong>Created By</strong> {singleElement.created_by}</div>
+                    <div><strong>Created At</strong> {singleElement.created_At}</div>
                     <hr />
                     <div className="blogDesc">{singleElement.description}
                     </div>
@@ -81,7 +88,7 @@ function BlogsDashboard() {
                             <button className="DislikeButton"><i class="fa fa-thumbs-o-down" aria-hidden="true"> DisLike </i></button>
                         </div>
                         <div>
-                            <button className="edit" onClick={handleEditButton}><i class="fa fa-pencil" aria-hidden="true"> Edit </i></button>
+                            <button className="edit" onClick={()=>handleEditButton(singleElement.id)}><i class="fa fa-pencil" aria-hidden="true"> Edit </i></button>
                             <button className="delete" onClick={()=>handleDeleteButton(singleElement.id)}><i class="fa fa-trash" aria-hidden="true"> Delete </i></button>
                         </div>
                     </div>

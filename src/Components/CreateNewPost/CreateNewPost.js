@@ -1,46 +1,69 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./CreateNewPost.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-function CreateNewPost(){
-    const navigate = useNavigate();
+import moment from "moment";
 
-   
-    function handleCancelButton(){
+function CreateNewPost() {
+    const navigate = useNavigate();
+    const { id } = useParams();
+
+    function handleCancelButton() {
         navigate('/blogs')
     }
 
-    const[userData,setUserData]=useState({title:"", description:""})
+    const [userData, setUserData] = useState({ title: "", description: "" })
 
-    function userTitle(event){
-        let user={...userData}
-        user["title"]=(event.target.value)
+    function userTitle(event) {
+        let user = { ...userData }
+        user["title"] = (event.target.value)
         setUserData(user)
     }
-     function userDesc(event){
-        let user={...userData}
-        user["description"]=(event.target.value)
+    function userDesc(event) {
+        let user = { ...userData }
+        user["description"] = (event.target.value)
         setUserData(user)
     }
-    function handleSaveButton(){
-    axios.post("http://localhost:4200/blogs",userData)
-            .then((response)=>{
-                console.log(response);
-                navigate("/blogs")
-                
-        })
-    
+
+    useEffect(() => {
+        if (id) {
+            axios.get("http://localhost:4200/blogs/" + id)
+                .then((response) => {
+                    setUserData(response.data)
+                })
+        }
+    },[])
+    function handleSaveButton() {
+        const email = localStorage.getItem("useremail")
+        if (id) {
+            axios.put("http://localhost:4200/blogs/" + id, userData)
+                .then(() =>
+                    // console.log(Response.data);
+                    navigate("/blogs"))
+        }
+        else {
+            axios.post("http://localhost:4200/blogs",
+                {
+                    ...userData,
+                    created_by: email,
+                    created_At: moment().format("YYYY/MM/DD")
+                })
+                .then((response) => {
+                    console.log(response);
+                    navigate("/blogs")
+                })
+        }
     }
-    return(
+    return (
         <div>
             <div className="titleBox">
-                <input type="text" placeholder="Title" className="title" value={userData.title} onChange={userTitle}/>
-                <hr/>
+                <input type="text" placeholder="Title" className="title" value={userData.title} onChange={userTitle} />
+                <hr />
                 <textarea type="text" placeholder="Description" value={userData.description} onChange={userDesc}></textarea>
-            <div className="titleButtons">
-                <button className="button" onClick={handleCancelButton}><i class="fa fa-ban" aria-hidden="true"> Cancel</i></button>
-                <button className="button" onClick={handleSaveButton}><i class="fa fa-bookmark" aria-hidden="true"> Save </i></button>
-            </div>
+                <div className="titleButtons">
+                    <button className="button" onClick={handleCancelButton}><i class="fa fa-ban" aria-hidden="true"> Cancel</i></button>
+                    <button className="button" onClick={handleSaveButton}><i class="fa fa-bookmark" aria-hidden="true"> Save </i></button>
+                </div>
             </div>
 
         </div>
