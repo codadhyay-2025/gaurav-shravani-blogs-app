@@ -6,6 +6,7 @@ function Register() {
     const navigate =useNavigate();
      
    const[userRegisterData,setUserRegisterData]=useState({name:"",email:"",password:""});
+   localStorage.setItem("userName", userRegisterData.name);
      function userName(event){
         let user={...userRegisterData}
         user["name"]=(event.target.value)
