@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 function Header(){
+    // const[username,setusername]=useState({name:""});
+    const userEmail = localStorage.getItem("useremail");
 
     const navigate = useNavigate();
 
@@ -13,16 +16,27 @@ function Header(){
     function handleBlogName(){
         navigate('/')
     }
+    function handleLogoutUser(){
+        localStorage.removeItem("useremail")
+        navigate('/')
+    }
 
     return(
         <div>
              {/* headersection */}
             <div className="headersection">
                 <div className="blogsheadername" onClick={handleBlogName}>Blogs</div>
+                {userEmail?(
+                    <div>
+                    <span className="actionloginbutton" onClick={handleLoginButton}>{userEmail}</span>
+                    <span className="actionregisterbutton" onClick={handleLogoutUser}>LogOut</span>
+                    
+                  </div>  
+                ):(
                 <div>
                     <span className="actionloginbutton" onClick={handleLoginButton}>Login</span>
                     <span className="actionregisterbutton" onClick={handleregisterButton}>Register</span>
-                </div>
+                </div>)}
             </div>
         </div>
     );

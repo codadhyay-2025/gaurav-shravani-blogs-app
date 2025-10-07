@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 function BlogsDashboard() {
     const navigate = useNavigate();
-    const {id}=useParams();
+    // const {id}=useParams();
     const[blogs,setblogs]= useState();
     function handleCreateNewPostButton(){
         navigate('/createpost')
@@ -75,6 +75,7 @@ function BlogsDashboard() {
                     </div>
 
                     <div className="buttonsSection">
+
                         <div>
                             <button className="likeButton"><i class="fa fa-thumbs-o-up" aria-hidden="true"> Like </i></button>
                             <button className="DislikeButton"><i class="fa fa-thumbs-o-down" aria-hidden="true"> DisLike </i></button>
