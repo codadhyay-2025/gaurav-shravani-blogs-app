@@ -117,25 +117,37 @@
       "name": "Shravani Gunjal",
       "email": "shravani.gunjal05@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": "305a",
+      "name": "Shardul Pawar",
+      "email": "shardul@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "852f",
+      "name": "Shravani Gunjal",
+      "email": "shravani.gunjal05@gmail.com",
+      "password": "2345"
+    },
+    {
+      "id": "7cda",
+      "name": "Rutuja Date",
+      "email": "rutuja@gmail.com",
+      "password": "1234"
     }
   ],
   "blogs": [
     {
-      "id": "ae03",
-      "title": "My Blog",
-      "description": "Hii! I am Shravani."
-    },
-    {
-      "id": "1cca",
-      "title": "Shravani",
-      "description": "Hello"
-    },
-    {
-      "id": "8aaa",
-      "title": "wrettttttttttttt",
-      "description": "ad sharavni ahe",
-      "created_by": "gaurav@gmail.com",
-      "created_At": "2025/10/07"
+      "id": "0970",
+      "title": "Rutuja ",
+      "description": "hi i am Rutuja",
+      "likes": [],
+      "disLike": [
+        "rutuja@gmail.com"
+      ],
+      "created_by": "rutuja@gmail.com",
+      "created_At": "2025/10/08"
     }
   ]
 }

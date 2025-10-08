@@ -12,7 +12,7 @@ function CreateNewPost() {
         navigate('/blogs')
     }
 
-    const [userData, setUserData] = useState({ title: "", description: "" })
+    const [userData, setUserData] = useState({ title: "", description: "",likes:[],disLike:[] })
 
     function userTitle(event) {
         let user = { ...userData }
@@ -46,7 +46,9 @@ function CreateNewPost() {
                 {
                     ...userData,
                     created_by: email,
-                    created_At: moment().format("YYYY/MM/DD")
+                    created_At: moment().format("YYYY/MM/DD"),
+                    // likes:[],
+                    // dislikes:[]
                 })
                 .then((response) => {
                     console.log(response);

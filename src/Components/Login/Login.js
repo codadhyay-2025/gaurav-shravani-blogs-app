@@ -29,8 +29,8 @@ function Login(){
                 
                 if(user){
                     // alert("Login success");
-                    localStorage.setItem("userName", userLoginData.name);
-                    localStorage.setItem("useremail",userLoginData.email)
+                    localStorage.setItem("userName", user.name);
+                    localStorage.setItem("useremail",user.email)
                     console.log(Response);
                     navigate('/blogs')
                     

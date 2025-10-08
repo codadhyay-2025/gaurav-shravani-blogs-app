@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Header(){
     // const[username,setusername]=useState({name:""});
     const userEmail = localStorage.getItem("useremail");
-
+    const username = localStorage.getItem("userName");
     const navigate = useNavigate();
 
     function handleLoginButton(){
@@ -28,7 +28,7 @@ function Header(){
                 <div className="blogsheadername" onClick={handleBlogName}>Blogs</div>
                 {userEmail?(
                     <div>
-                    <span className="actionloginbutton" onClick={handleLoginButton}>{userEmail}</span>
+                    <span className="actionloginbutton" onClick={handleLoginButton}>{username}</span>
                     <span className="actionregisterbutton" onClick={handleLogoutUser}>LogOut</span>
                     
                   </div>  
