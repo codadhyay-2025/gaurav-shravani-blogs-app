@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 function BlogsDashboard() {
     const navigate = useNavigate();
+    
     // const {id}=useParams();
     const[blogs,setblogs]= useState();
 

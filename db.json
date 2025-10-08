@@ -113,30 +113,5 @@
       "password": "1234"
     }
   ],
-  "blogs": [
-    {
-      "id": "ae03",
-      "title": "My Blog",
-      "description": "Hii! I am Shravani..."
-    },
-    {
-      "id": "1cca",
-      "title": "Shravani",
-      "description": "Hello"
-    },
-    {
-      "id": "8aaa",
-      "title": "wrettttttttttttt",
-      "description": "ad sharavni ahe",
-      "created_by": "gaurav@gmail.com",
-      "created_At": "2025/10/07"
-    },
-    {
-      "id": "55d1",
-      "title": "gasacgdvas",
-      "description": "duahckjdkhjck",
-      "created_by": "ddd",
-      "created_At": "2025/10/07"
-    }
-  ]
+  "blogs": []
 }
