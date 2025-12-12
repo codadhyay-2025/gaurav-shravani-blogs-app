@@ -28,7 +28,7 @@ function Register() {
                 alert("Please Enter Valid Details!")
         }
         else{
-            axios.post("http://localhost:4200/user",userRegisterData)
+            axios.post("https://gaurav-shravani-blogs-app.vercel.app/api/user",userRegisterData)
             .then(()=>{
               navigate("/login") 
             })}

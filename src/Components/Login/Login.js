@@ -2,54 +2,54 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { useState } from "react";
 import axios from "axios";
-function Login(){
-    const[userLoginData, setuserLoginData]= useState({email:"",password:""});
-    function useremail(event){
-        let user={...userLoginData}
-        user["email"]=event.target.value;
+function Login() {
+    const [userLoginData, setuserLoginData] = useState({ email: "", password: "" });
+    function useremail(event) {
+        let user = { ...userLoginData }
+        user["email"] = event.target.value;
         setuserLoginData(user);
     }
-    function userpassword(event){
-        let user={...userLoginData}
-        user["password"]=event.target.value;
+    function userpassword(event) {
+        let user = { ...userLoginData }
+        user["password"] = event.target.value;
         setuserLoginData(user);
     }
-    function handleLoginData(){
-        if(!userLoginData.email || !userLoginData.password){
+    function handleLoginData() {
+        if (!userLoginData.email || !userLoginData.password) {
             alert("please enter email and password...")
             return 0;
         }
-        axios.get("http://localhost:4200/user",userLoginData)
-            .then((Response)=>{
+        axios.get("https://gaurav-shravani-blogs-app.vercel.app/api/user", userLoginData)
+            .then((Response) => {
                 const user = Response.data.find(
-                    (singleElement)=>
-                        singleElement.email == userLoginData.email&&
-                        singleElement.password ==userLoginData.password
+                    (singleElement) =>
+                        singleElement.email == userLoginData.email &&
+                        singleElement.password == userLoginData.password
                 );
-                
-                if(user){
+
+                if (user) {
                     // alert("Login success");
                     localStorage.setItem("userName", user.name);
-                    localStorage.setItem("useremail",user.email)
+                    localStorage.setItem("useremail", user.email)
                     console.log(Response);
                     navigate('/blogs')
-                    
+
                 }
-                else{
+                else {
                     alert("Invalid user");
                     console.log("Please Enter Correct Information");
-                    
-                    
+
+
                 }
-                
+
             })
-        
+
     }
-    const navigate =useNavigate();
+    const navigate = useNavigate();
     //  function handleLoginButton(){
-        
+
     //  }
-    return(
+    return (
         <div>
             <div className="loginsection">
                 <div className="blogsname">Blogs!</div>
@@ -57,12 +57,12 @@ function Login(){
                 <hr />
                 <div className="registername">Login</div>
                 <label>Email</label><br />
-                <input type="email" placeholder="test@gmail.com"  className="inputfielddata" value={userLoginData.email} onChange={useremail} /><br />
+                <input type="email" placeholder="test@gmail.com" className="inputfielddata" value={userLoginData.email} onChange={useremail} /><br />
                 <label>Password</label><br />
-                <input type="password" placeholder="password"  className="inputfielddata" value={userLoginData.password} onChange={userpassword} /><br />
+                <input type="password" placeholder="password" className="inputfielddata" value={userLoginData.password} onChange={userpassword} /><br />
                 <button className="loginbutton" onClick={handleLoginData}>Login</button>
             </div>
 
         </div>
     );
-}export default Login;
+} export default Login;

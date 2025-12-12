@@ -23,7 +23,7 @@ function BlogsDashboard() {
         }
         else {
             const updateLikes = [...singleElement.likes, userlike]
-            axios.patch("http://localhost:4200/blogs/" + singleElement.id, { likes: updateLikes })
+            axios.patch("https://gaurav-shravani-blogs-app.vercel.app/api/blogs/" + singleElement.id, { likes: updateLikes })
                 .then(() => {
                     jsondata()
                 })
@@ -41,7 +41,7 @@ function BlogsDashboard() {
         }
         else {
             const updatedisLikes = [...singleElement.disLike, userdisLike]
-            axios.patch("http://localhost:4200/blogs/" + singleElement.id, { disLike: updatedisLikes })
+            axios.patch("https://gaurav-shravani-blogs-app.vercel.app/api/blogs/" + singleElement.id, { disLike: updatedisLikes })
                 .then(() => {
                     jsondata()
                 })
@@ -58,7 +58,7 @@ function BlogsDashboard() {
     //     description:"hello i am gaurav"
     // }];
     function jsondata() {
-        axios.get("http://localhost:4200/blogs")
+        axios.get("https://gaurav-shravani-blogs-app.vercel.app/api/blogs")
             .then((res) => {
                 setblogs(res.data);
 
@@ -73,7 +73,7 @@ function BlogsDashboard() {
         jsondata();
     }, [])
     function handleDeleteButton(id) {
-        axios.delete("http://localhost:4200/blogs/" + id)
+        axios.delete("https://gaurav-shravani-blogs-app.vercel.app/api/blogs/" + id)
             .then((Response) => {
                 console.log(Response);
 
@@ -86,7 +86,7 @@ function BlogsDashboard() {
             })
     }
     function handleEditButton(id) {
-        // axios.patch("http://localhost:4200/blogs/"+id)
+        // axios.patch("https://gaurav-shravani-blogs-app.vercel.app/api/blogs/"+id)
         // .then((Response)=>{
         //     console.log(Response.data);
         navigate("/createpost/" + id)

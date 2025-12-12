@@ -27,7 +27,7 @@ function CreateNewPost() {
 
     useEffect(() => {
         if (id) {
-            axios.get("http://localhost:4200/blogs/" + id)
+            axios.get("https://gaurav-shravani-blogs-app.vercel.app/api/blogs/" + id)
                 .then((response) => {
                     setUserData(response.data)
                 })
@@ -36,13 +36,13 @@ function CreateNewPost() {
     function handleSaveButton() {
         const email = localStorage.getItem("useremail")
         if (id) {
-            axios.put("http://localhost:4200/blogs/" + id, userData)
+            axios.put("https://gaurav-shravani-blogs-app.vercel.app/api/blogs/" + id, userData)
                 .then(() =>
                     // console.log(Response.data);
                     navigate("/blogs"))
         }
         else {
-            axios.post("http://localhost:4200/blogs",
+            axios.post("https://gaurav-shravani-blogs-app.vercel.app/api/blogs",
                 {
                     ...userData,
                     created_by: email,
